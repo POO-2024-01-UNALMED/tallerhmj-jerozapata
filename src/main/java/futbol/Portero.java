@@ -12,8 +12,9 @@ public class Portero extends Futbolista {
         this.dorsal = dorsal;
     }
 
+ 
     @Override
-    public boolean juagarConLasManos(){
+    public boolean jugarConLasManos(){
         return true;
     }
 
