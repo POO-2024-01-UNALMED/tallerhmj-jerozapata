@@ -5,10 +5,6 @@ public class Jugador extends Futbolista{
     public short golesMarcados;
     public byte dorsal;
 
-    public boolean juagarConLasManos(){
-        return false;
-    }
-
     public Jugador(){
 
         super();
@@ -23,14 +19,20 @@ public class Jugador extends Futbolista{
         this.dorsal = dorsal;
     }
 
+    @Override
+    public boolean juagarConLasManos(){
+        return false;
+    }
 
+    @Override
     public int compareTo(Futbolista f){
 
         return Math.abs(this.getEdad() - f.getEdad());
     }
 
+    @Override
     public String toString(){
-        
+
         return "El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + getPosicion() + " con el dorsal " + dorsal + ". Ha marcado " + golesMarcados;   
     }
 
