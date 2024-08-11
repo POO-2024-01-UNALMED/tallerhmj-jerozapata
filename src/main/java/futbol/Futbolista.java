@@ -27,7 +27,7 @@ public abstract class Futbolista implements Comparable<Futbolista> {
 
 
     public int compareTo(Futbolista f) {
-        return Integer.compare(this.edad, f.edad);
+        return Short.compare(this.edad, f.edad);
     }
 
   
