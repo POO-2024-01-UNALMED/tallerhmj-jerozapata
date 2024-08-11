@@ -7,7 +7,7 @@ public class Jugador extends Futbolista{
 
     public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal){
 
-        super(nombre, edad, posicion)
+        super(nombre, edad, posicion);
         this.golesMarcados = golesMarcados;
         this.dorsal = dorsal;
     }
@@ -18,4 +18,20 @@ public class Jugador extends Futbolista{
         this.golesMarcados = 289;
         this.dorsal = 7;
     }
+
+    public int comparar(Futbolista f){
+
+        return Math.abs(this.getEdad() - f.getEdad());
+    }
+
+    public String toString(){
+        return super.toString()+ " con el dorsal"+ dorsal+ ". Ha marcado "+ golesMarcados;   
+    }
+
+
+    public boolean juagarConLasManos(){
+        return false;
+    }
+
+
 }
