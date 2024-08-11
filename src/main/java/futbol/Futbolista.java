@@ -7,6 +7,11 @@ public abstract class Futbolista implements Comparable<Futbolista> {
     private int edad;
     private final String posicion;
 
+        // Constructor por defecto
+    public Futbolista(){
+        this("Maradona", 30, "delantero");
+    }
+    
     // Constructor para dar valor a los atributos
     public Futbolista(String nombre, int edad, String posicion){
 
@@ -15,10 +20,7 @@ public abstract class Futbolista implements Comparable<Futbolista> {
         this.posicion=posicion;
     }
 
-    // Constructor por defecto
-    public Futbolista(){
-        this("Maradona", 30, "delantero");
-    }
+    public abstract boolean juagarConLasManos();
 
     public int compareTo(Futbolista f){
 
@@ -32,11 +34,9 @@ public abstract class Futbolista implements Comparable<Futbolista> {
     @Override
     public String toString(){
 
-        return "El futbolista "+ nombre + " tiene "+ edad + " años, y juega de "+ posicion+".";
+        return "El futbolista "+ nombre + " tiene "+ edad + " años, y juega de "+ posicion;
         
     }
-
-    public abstract boolean juagarConLasManos();
 
     // Setter y getters
 
