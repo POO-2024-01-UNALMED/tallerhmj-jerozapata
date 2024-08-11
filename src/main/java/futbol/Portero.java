@@ -16,13 +16,6 @@ public class Portero extends Futbolista {
         this.dorsal = dorsal;
     }
 
-    public String toString(){
-
-        return super.toString()+" con el dorsal "+ dorsal + ". Le han marcado "+ golesRecibidos+" goles.";
-
-    }
-
-
     public int compareTo(Futbolista f){
 
         if (f instanceof Portero) {
@@ -31,4 +24,10 @@ public class Portero extends Futbolista {
         return 0;
     }
 
+
+    public String toString(){
+
+        return super.toString()+" con el dorsal "+ dorsal + ". Le han marcado "+ golesRecibidos+" goles.";
+
+    }
 }

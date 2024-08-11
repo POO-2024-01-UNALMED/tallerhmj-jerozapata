@@ -5,6 +5,10 @@ public class Jugador extends Futbolista{
     public short golesMarcados;
     public byte dorsal;
 
+    public boolean juagarConLasManos(){
+        return false;
+    }
+
     public Jugador(){
 
         super();
@@ -28,11 +32,5 @@ public class Jugador extends Futbolista{
     public String toString(){
         return super.toString()+ " con el dorsal"+ dorsal+ ". Ha marcado "+ golesMarcados;   
     }
-
-
-    public boolean juagarConLasManos(){
-        return false;
-    }
-
 
 }
