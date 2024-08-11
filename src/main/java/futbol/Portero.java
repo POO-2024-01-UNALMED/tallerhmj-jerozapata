@@ -23,12 +23,12 @@ public class Portero extends Futbolista {
     }
 
 
-    public int comparar(Futbolista f){
+    public int compareTo(Futbolista f){
 
         if (f instanceof Portero) {
             return Math.abs(this.golesRecibidos - ((Portero)f).golesRecibidos);
         }
         return 0;
     }
-    
+
 }

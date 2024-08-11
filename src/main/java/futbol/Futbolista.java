@@ -20,7 +20,7 @@ public abstract class Futbolista implements Comparable{
         this("Maradona", 30, "delantero");
     }
 
-    public int comparar(Futbolista f){
+    public int compareTo(Futbolista f){
 
         return Integer.compare(this.edad, f.edad);
     }
