@@ -1,66 +1,59 @@
 package futbol;
 
 public abstract class Futbolista implements Comparable<Futbolista> {
-
-    //Atributos privados
     private String nombre;
     private int edad;
     private final String posicion;
 
-        // Constructor por defecto
-    public Futbolista(){
+    // Constructor por defecto
+    public Futbolista() {
         this("Maradona", 30, "delantero");
     }
-    
-    // Constructor para dar valor a los atributos
-    public Futbolista(String nombre, int edad, String posicion){
 
-        this.nombre=nombre;
-        this.edad=edad;
-        this.posicion=posicion;
+    // Constructor con parámetros
+    public Futbolista(String nombre, int edad, String posicion) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.posicion = posicion;
     }
 
-    public abstract boolean juagarConLasManos();
+    // Método abstracto
+    public abstract boolean jugarConLasManos();
 
-    public int compareTo(Futbolista f){
-
-        return Integer.compare(this.edad, f.edad);
-    }
-
-    public boolean equals(Futbolista f){
+    // Método equals
+    public boolean equals(Futbolista f) {
         return this.nombre.equals(f.nombre) && this.edad == f.edad && this.posicion.equals(f.posicion);
     }
 
-    @Override
-    public String toString(){
-
-        return "El futbolista "+ nombre + " tiene "+ edad + ", y juega de "+ posicion;
-        
+    // Implementación del método compareTo de la interfaz Comparable
+    public int compareTo(Futbolista f) {
+        return Integer.compare(this.edad, f.edad);
     }
 
-    // Setter y getters
+    // Método toString para imprimir la información del futbolista
+    @Override
+    public String toString() {
+        return "El futbolista " + nombre + " tiene " + edad + ", y juega de " + posicion;
+    }
 
-    public String getNombre(){
-
+    // Getters y Setters
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre){
-
-        this.nombre=nombre;
-
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public int getEdad(){
-
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad){
-        this.edad=edad;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
-    public String getPosicion(){
+    public String getPosicion() {
         return posicion;
     }
 }
