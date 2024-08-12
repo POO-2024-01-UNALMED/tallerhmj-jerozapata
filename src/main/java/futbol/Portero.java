@@ -19,7 +19,7 @@ public class Portero extends Futbolista {
     }
 
     @Override
-    public int compareTo(Futbolista f){
+    public int compareTo(Object f){
 
         if (f instanceof Portero) {
             return Math.abs(this.golesRecibidos - ((Portero)f).golesRecibidos);
